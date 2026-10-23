@@ -10,7 +10,7 @@ Tests come from the [International Dataset of Flaky Tests (IDoFT)](https://githu
 To make sure our model does not experience total class collapse during fine-tuning (ending up predicting flaky test for every input), we collect flaky and non-flaky tests from the same project code files. Our current `build_dataset.py` file uses Python's native `ast` parser to find boundaries of each target function along with any associated decorators and inline assertions. We currently avoid reading whole files or entire code structure.
 
 ## Dataset Formatting
-The dataset is serialized in SON Lines (`.jsonl`) format which is compatabile with the [ChatML](https://huggingface.co/learn/llm-course/en/chapter11/2) instruction/conversation schema required by the fine-tuning libraries (e.g. Hugging Face SFTTrainer, Unsloth, Llama Factory).
+The dataset is serialized in JSON Lines (`.jsonl`) format which is compatabile with the [ChatML](https://huggingface.co/learn/llm-course/en/chapter11/2) instruction/conversation schema required by the fine-tuning libraries (e.g. Hugging Face SFTTrainer, Unsloth, Llama Factory).
 
 Each line represents an independent JSON object structured as follows:
 ```json
