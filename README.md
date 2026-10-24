@@ -5,7 +5,7 @@ This project aims to use small language models (SLMs) to detect python flaky tes
 This dataset is created to help SLMs learn how to spot flaky tests in Python code.
 
 ## Where does the data come from?
-Tests come from the [International Dataset of Flaky Tests (IDoFT)](https://github.com/TestingResearchIllinois/idoft). Specifically, we look at the python related flaky tests, [py-data.csv](https://github.com/TestingResearchIllinois/idoft/blob/main/py-data.csv)
+Tests come from the [International Dataset of Flaky Tests (IDoFT)](https://github.com/TestingResearchIllinois/idoft). Specifically, we look at the python related flaky tests, [py-data.csv](https://github.com/TestingResearchIllinois/idoft/blob/main/py-data.csv).
 The team is also getting tests from the ["An Empirical Study of Flaky Tests in Python" dataset](https://zenodo.org/records/4450435).
 
 To make sure our model does not experience total class collapse during fine-tuning (ending up predicting flaky test for every input), we collect flaky and non-flaky tests from the same project code files. Our current `build_dataset_idoft.py` and `build_dataset_empirical.py` files uses Python's native `ast` parser to find boundaries of each target function along with any associated decorators and inline assertions. We currently avoid reading whole files or entire code structure.
