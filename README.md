@@ -44,6 +44,9 @@ Each line represents an independent JSON object structured as follows:
 ## /empirical_test_dataset
 This directory contains the updated dataset for FlakySLM. It is composed of the Python flaky tests from "An Empirical Study of Flaky Tests in Python".
 It has project-disjoint split into a train (70%), validation (15%), and test split (15%). So 70% of the projects are used as training data for the SLMs and the other 15%s are projects used for validation and testing. Keep in mind the actual number of tests in each train/val/test split varies as a project-disjoint split was performed.
+
 (`dataset_train.jsonl`) used to train the SLM.
+
 (`dataset_val.jsonl`) used to verify and adjust SLM parameters and training .
+
 (`dataset_test.jsonl`) used to benchmark SLM performance.
