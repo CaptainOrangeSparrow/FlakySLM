@@ -16,12 +16,18 @@ To make sure our model does not experience total class collapse during fine-tuni
 A test pair is defined as a flaky and non-flaky python test. Saved 7,027 pairs to extracted_raw_pairs.json
 
 Total Unique Repositories: 904
+
 [+] Train Split: 632 repos, 5,061 records saved to split_train_raw.json
+
 [+] Validation Split: 135 repos, 814 records saved to split_val_raw.json
+
 [+] Test Split: 137 repos, 1,152 records saved to split_test_raw.json
 
+
 [+] Converted 5,061 pairs into 10,122 records saved to dataset_train.jsonl
+
 [+] Converted 814 pairs into 1,628 records saved to dataset_val.jsonl
+
 [+] Converted 1,152 pairs into 2,304 records saved to dataset_test.jsonl
 
 # Dataset Formatting
