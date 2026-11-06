@@ -1,0 +1,89 @@
+{
+  "model_key": "claude-opus-5.5",
+  "provider": "anthropic",
+  "api_model_id": "claude-opus-5-5",
+  "served_models": [
+    "claude-opus-5-5"
+  ],
+  "run_folder": "benchmark_pipeline/benchmarks/run_claude-opus-5.5_zero_shot_baseline_20261106_010044",
+  "run_started": "2026-11-06T01:00:44",
+  "settings": {
+    "prompt_style": "formatted",
+    "shots": 0,
+    "reasoning_effort": "low",
+    "temperature": null,
+    "max_output_tokens": 4096,
+    "concurrent_workers": 8,
+    "parser": "classification_line_v1",
+    "test_data": "empirical_test_dataset/dataset_test.jsonl"
+  },
+  "all_rows": {
+    "n": 2304,
+    "f1_score": 0.6265,
+    "precision": 0.6254,
+    "recall": 0.6276,
+    "accuracy": 0.6259,
+    "specificity": 0.6241,
+    "balanced_accuracy": 0.6259,
+    "mcc": 0.2517,
+    "tp": 723,
+    "fp": 433,
+    "fn": 429,
+    "tn": 719
+  },
+  "unique_tests": {
+    "n": 1158,
+    "f1_score": 0.7631,
+    "precision": 0.9272,
+    "recall": 0.6484,
+    "accuracy": 0.6451,
+    "specificity": 0.6204,
+    "balanced_accuracy": 0.6344,
+    "mcc": 0.1786,
+    "tp": 662,
+    "fp": 52,
+    "fn": 359,
+    "tn": 85
+  },
+  "recall_by_root_cause": {
+    "General Flakiness": {
+      "recall": 0.6861,
+      "detected": 188,
+      "n": 274
+    },
+    "Order-Dependent (OD)": {
+      "recall": 0.4969,
+      "detected": 161,
+      "n": 324
+    },
+    "Infrastructure / Environment": {
+      "recall": 0.6751,
+      "detected": 374,
+      "n": 554
+    }
+  },
+  "non_flaky_specificity": {
+    "specificity": 0.6241,
+    "correctly_cleared": 719,
+    "n": 1152
+  },
+  "root_cause_category_accuracy": {
+    "accuracy": 0.6113,
+    "n_true_positives": 723
+  },
+  "reliability": {
+    "parsing_errors": 0,
+    "api_errors": 0,
+    "stop_reasons": {
+      "end_turn": 1151
+    }
+  },
+  "operational": {
+    "api_calls": 1151,
+    "api_input_tokens": 681156,
+    "api_output_tokens": 152752,
+    "mean_request_latency_sec": 2.415,
+    "wall_time_sec": 348.47,
+    "avg_wall_time_per_unique_prompt_sec": 0.3028
+  }
+}
