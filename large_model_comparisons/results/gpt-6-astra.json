@@ -1,0 +1,89 @@
+{
+  "model_key": "gpt-6-astra",
+  "provider": "openai",
+  "api_model_id": "gpt-6-astra",
+  "served_models": [
+    "gpt-6-astra"
+  ],
+  "run_folder": "benchmark_pipeline/benchmarks/run_gpt-6-astra_zero_shot_baseline_20261106_013512",
+  "run_started": "2026-11-06T01:35:12",
+  "settings": {
+    "prompt_style": "formatted",
+    "shots": 0,
+    "reasoning_effort": "low",
+    "temperature": null,
+    "max_output_tokens": 4096,
+    "concurrent_workers": 8,
+    "parser": "classification_line_v1",
+    "test_data": "empirical_test_dataset/dataset_test.jsonl"
+  },
+  "all_rows": {
+    "n": 2304,
+    "f1_score": 0.6844,
+    "precision": 0.7563,
+    "recall": 0.625,
+    "accuracy": 0.7118,
+    "specificity": 0.7986,
+    "balanced_accuracy": 0.7118,
+    "mcc": 0.4301,
+    "tp": 720,
+    "fp": 232,
+    "fn": 432,
+    "tn": 920
+  },
+  "unique_tests": {
+    "n": 1158,
+    "f1_score": 0.7691,
+    "precision": 0.9367,
+    "recall": 0.6523,
+    "accuracy": 0.6546,
+    "specificity": 0.6715,
+    "balanced_accuracy": 0.6619,
+    "mcc": 0.2148,
+    "tp": 666,
+    "fp": 45,
+    "fn": 355,
+    "tn": 92
+  },
+  "recall_by_root_cause": {
+    "General Flakiness": {
+      "recall": 0.6095,
+      "detected": 167,
+      "n": 274
+    },
+    "Order-Dependent (OD)": {
+      "recall": 0.3889,
+      "detected": 126,
+      "n": 324
+    },
+    "Infrastructure / Environment": {
+      "recall": 0.7708,
+      "detected": 427,
+      "n": 554
+    }
+  },
+  "non_flaky_specificity": {
+    "specificity": 0.7986,
+    "correctly_cleared": 920,
+    "n": 1152
+  },
+  "root_cause_category_accuracy": {
+    "accuracy": 0.6861,
+    "n_true_positives": 720
+  },
+  "reliability": {
+    "parsing_errors": 0,
+    "api_errors": 0,
+    "stop_reasons": {
+      "completed": 1151
+    }
+  },
+  "operational": {
+    "api_calls": 1151,
+    "api_input_tokens": 418693,
+    "api_output_tokens": 89430,
+    "mean_request_latency_sec": 3.503,
+    "wall_time_sec": 506.64,
+    "avg_wall_time_per_unique_prompt_sec": 0.4402
+  }
+}

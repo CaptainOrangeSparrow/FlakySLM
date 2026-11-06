@@ -1,0 +1,119 @@
+{
+  "model_name": "claude-opus-5-5",
+  "model_key": "claude-opus-5.5",
+  "run_tag": "zero_shot_baseline_n40",
+  "timestamp": "2026-11-06 00:55:33",
+  "total_test_samples": 40,
+  "parsing_errors": 0,
+  "operational_metrics": {
+    "total_inference_time_sec": 11.71,
+    "avg_latency_per_sample_sec": 0.3444,
+    "total_prompt_tokens": 20881,
+    "total_completion_tokens": 4798,
+    "total_tokens_consumed": 25679,
+    "avg_tokens_per_sample": 641.98,
+    "mean_request_latency_sec": 2.243,
+    "concurrent_workers": 8,
+    "api_calls": 34,
+    "api_input_tokens": 18249,
+    "api_output_tokens": 4215
+  },
+  "overall_classification_metrics": {
+    "precision": 0.7778,
+    "recall": 0.7,
+    "f1_score": 0.7368,
+    "accuracy": 0.75,
+    "tp": 14,
+    "fp": 4,
+    "fn": 6,
+    "tn": 16
+  },
+  "disaggregated_sub_category_metrics": {
+    "None (Deterministic)": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "accuracy": 0.8,
+      "tp": 0,
+      "fp": 4,
+      "fn": 0,
+      "tn": 16
+    },
+    "Order-Dependent (OD)": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1_score": 0.6667,
+      "accuracy": 0.5,
+      "tp": 2,
+      "fp": 0,
+      "fn": 2,
+      "tn": 0
+    },
+    "General Flakiness": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0
+    },
+    "Infrastructure / Environment": {
+      "precision": 1.0,
+      "recall": 0.6364,
+      "f1_score": 0.7778,
+      "accuracy": 0.6364,
+      "tp": 7,
+      "fp": 0,
+      "fn": 4,
+      "tn": 0
+    }
+  },
+  "parser": "classification_line_v1",
+  "overall_extended_metrics": {
+    "precision": 0.7778,
+    "recall": 0.7,
+    "f1_score": 0.7368,
+    "accuracy": 0.75,
+    "tp": 14,
+    "fp": 4,
+    "fn": 6,
+    "tn": 16,
+    "specificity": 0.8,
+    "balanced_accuracy": 0.75,
+    "mcc": 0.5025,
+    "n": 40
+  },
+  "deduplicated_classification_metrics": {
+    "precision": 0.7778,
+    "recall": 0.7,
+    "f1_score": 0.7368,
+    "accuracy": 0.7059,
+    "tp": 14,
+    "fp": 4,
+    "fn": 6,
+    "tn": 10,
+    "specificity": 0.7143,
+    "balanced_accuracy": 0.7071,
+    "mcc": 0.4085,
+    "n": 34
+  },
+  "root_cause_category_accuracy": {
+    "accuracy": 0.7143,
+    "n_true_positives": 14
+  },
+  "parse_methods": {
+    "classification_line": 40
+  },
+  "provider": "anthropic",
+  "served_models": [
+    "claude-opus-5-5"
+  ],
+  "prompt_style": "formatted",
+  "shots": 0,
+  "api_errors": 0,
+  "stop_reasons": {
+    "end_turn": 34
+  }
+}

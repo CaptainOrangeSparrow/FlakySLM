@@ -1,0 +1,20 @@
+{
+  "provider": "openai",
+  "model": "gpt-6-astra",
+  "model_key": "gpt-6-astra",
+  "run_tag": "zero_shot_baseline",
+  "prompt_style": "formatted",
+  "shots": 0,
+  "limit": null,
+  "seed": 0,
+  "data": "/Users/samirjoshi/samir_user/software_testing/FlakySLM/FlakySLM/empirical_test_dataset/dataset_test.jsonl",
+  "max_tokens": 4096,
+  "temperature": null,
+  "effort": "low",
+  "workers": 8,
+  "n_rows": 2304,
+  "n_unique_prompts": 1151,
+  "system_prompt": "You are an expert software engineer specializing in Python test quality and flakiness detection.\n\nRespond in exactly this format and nothing else:\n\nClassification: <Flaky or Non-Flaky>\nRoot Cause Category: <one of: Order-Dependent (OD), Infrastructure / Environment, General Flakiness, None>\nReasoning: <one or two sentences>\n\nCategory definitions:\n- Order-Dependent (OD): passes or fails depending on which tests ran before it (shared state, globals, files, caches, DB rows).\n- Infrastructure / Environment: depends on network, filesystem, OS, time zone, installed packages, hardware, or other external resources.\n- General Flakiness: non-deterministic for other reasons (randomness, timing, concurrency, floating point, unordered collections, etc.).\nUse \"None\" if and only if the classification is Non-Flaky.",
+  "started": "2026-11-06T01:35:12",
+  "wall_time_sec": 506.64
+}
