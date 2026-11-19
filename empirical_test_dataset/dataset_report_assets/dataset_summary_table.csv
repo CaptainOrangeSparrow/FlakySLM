@@ -1,0 +1,5 @@
+Dataset Split,Unique Repositories,Total Test Cases,Flaky Tests,Non-Flaky Controls,Order-Dependent (OD),Infrastructure / Env,General Flakiness
+Train (70%),632,10122,5061,5061,3343,1226,492
+Validation (15%),135,1628,814,814,565,136,113
+Test (15%),137,2304,1152,1152,324,554,274
+Total (100%),904,14054,7027,7027,4232,1916,879
